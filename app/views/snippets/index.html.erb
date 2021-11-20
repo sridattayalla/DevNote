@@ -1,0 +1,170 @@
+<%= javascript_pack_tag 'application' ,'data-turbolinks-track': 'reload'  %>
+<%= stylesheet_pack_tag 'application' ,'data-turbolinks-track': 'reload'  %>
+<%= stylesheet_link_tag 'application' ,'data-turbolinks-track': 'reload'  %>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%= javascript_include_tag "snippet.js" %>
+<script src="https://kit.fontawesome.com/67d371bcf7.js" crossorigin="anonymous"></script>
+
+<div class="container-fluid row justify-content-center m-0 p-0 main position-relative">
+  <div class="nav-bar-container container-fluid bg-white shadow p-0 mb-3 rounded-lg w-100 border row position-sticky col-xs-12 col-md-8 col-lg-8 col-xl-8">
+
+    <div class="search_home_div col-xs-12 col-md-6  col-lg-6 col-xl-6  d-flex align-items-center align-content-center ">
+
+      <div class="img_div mr-2 cursor">
+        <img src="/assets/logo.svg" class="logo " alt="">
+      </div>
+      <div class="search ml-auto rounded d-flex align-content-between align-items-center">
+        <input type="text" class="border-0 bg-transparent p-2", placeholder="Search">
+        <i class="fas fa-search ml-3 mr-2"></i>
+      </div>
+
+    </div>
+    <div class="user_new_div mb-2 mt-2 col-xs-12 col-md-6  col-lg-6 col-xl-6 d-flex align-items-center justify-content-between ">
+      <div class="manage_data_controller_div d-flex align-items-center">
+        <div class="col btn dropdown m-auto" id="sort_dropdown_button" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-sort"></i>
+          <div class="dropdown-menu" aria-labelledby="sort_dropdown_button">
+            <div class="dropdown-item" id="author_name_asc">Author Name (A-Z)</div>
+            <a class="dropdown-item" id="author_name_desc">Author Name (Z-A)</a>
+            <a class="dropdown-item" id="latest">Date (Latest first)</a>
+            <a class="dropdown-item" id="oldest">Date (oldest first)</a>
+          </div>
+        </div>
+        <i class="fas fa-filter ml-3 cursor"></i>
+      </div>
+
+      <% if @user_exist %>
+        <div class="dropdown show">
+          <div  class="dropdown-toggle cursor" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user"></i>
+          </div>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="snippets/new"><i class="fas fa-plus"></i>Add Snippet</a>
+          </div>
+        </div>
+        <% else %>
+      <div>
+        <a href="../users/sign_in"><button class="btn btn-dark">Login/SignUp</button></a>
+
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+
+
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+    elit. Aenean commodo ligula eget dolor. Aenean massa
+    <strong>strong</strong>. Cum sociis natoque penatibus
+    et magnis dis parturient montes, nascetur ridiculus
+    mus. Donec quam felis, ultricies nec, pellentesque
+    eu, pretium quis, sem. Nulla consequat massa quis
+    enim. Donec pede justo, fringilla vel, aliquet nec,
+    vulputate eget, arcu. In enim justo, rhoncus ut,
+    imperdiet a, venenatis vitae, justo. Nullam dictum
+    felis eu pede <a class="external ext" href="#">link</a>
+    mollis pretium. Integer tincidunt. Cras dapibus.
+    Vivamus elementum semper nisi. Aenean vulputate
+    eleifend tellus. Aenean leo ligula, porttitor eu,
+    consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+    dapibus in, viverra quis, feugiat a, tellus. Phasellus
+    viverra nulla ut metus varius laoreet. Quisque rutrum.
+    Aenean imperdiet. Etiam ultricies nisi vel augue.
+    Curabitur ullamcorper ultricies nisi.</p>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+  <h1>Lorem ipsum dolor sit amet consectetuer adipiscing
+    elit</h1>
+
+  <h2>Aenean commodo ligula eget dolor aenean massa</h2>
+
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+    elit. Aenean commodo ligula eget dolor. Aenean massa.
+    Cum sociis natoque penatibus et magnis dis parturient
+    montes, nascetur ridiculus mus. Donec quam felis,
+    ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+  <h2>Aenean commodo ligula eget dolor aenean massa</h2>
+
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+    elit. Aenean commodo ligula eget dolor. Aenean massa.
+    Cum sociis natoque penatibus et magnis dis parturient
+    montes, nascetur ridiculus mus. Donec quam felis,
+    ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+  <ul>
+    <li>Lorem ipsum dolor sit amet consectetuer.</li>
+    <li>Aenean commodo ligula eget dolor.</li>
+    <li>Aenean massa cum sociis natoque penatibus.</li>
+  </ul>
+
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+    elit. Aenean commodo ligula eget dolor. Aenean massa.
+    Cum sociis natoque penatibus et magnis dis parturient
+    montes, nascetur ridiculus mus. Donec quam felis,
+    ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+  <form action="#" method="post">
+    <fieldset>
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your
+full name" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter
+your email address" />
+
+      <label for="message">Message:</label>
+      <textarea id="message" placeholder="What's on your
+mind?"></textarea>
+
+      <input type="submit" value="Send message" />
+
+    </fieldset>
+  </form>
+
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+    elit. Aenean commodo ligula eget dolor. Aenean massa.
+    Cum sociis natoque penatibus et magnis dis parturient
+    montes, nascetur ridiculus mus. Donec quam felis,
+    ultricies nec, pellentesque eu, pretium quis, sem.</p>
+
+  <table class="data">
+    <tr>
+      <th>Entry Header 1</th>
+      <th>Entry Header 2</th>
+      <th>Entry Header 3</th>
+      <th>Entry Header 4</th>
+    </tr>
+    <tr>
+      <td>Entry First Line 1</td>
+      <td>Entry First Line 2</td>
+      <td>Entry First Line 3</td>
+      <td>Entry First Line 4</td>
+    </tr>
+    <tr>
+      <td>Entry Line 1</td>
+      <td>Entry Line 2</td>
+      <td>Entry Line 3</td>
+      <td>Entry Line 4</td>
+    </tr>
+    <tr>
+      <td>Entry Last Line 1</td>
+      <td>Entry Last Line 2</td>
+      <td>Entry Last Line 3</td>
+      <td>Entry Last Line 4</td>
+    </tr>
+  </table>
+
+
+</div>

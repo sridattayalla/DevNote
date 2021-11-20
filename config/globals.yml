@@ -1,0 +1,4 @@
+development:
+  root: http://localhost:3000
+  test: Working fine in development
+  from_email: sridatta555@gmail.com

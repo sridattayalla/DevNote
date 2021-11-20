@@ -1,0 +1,8 @@
+<%= render partial: 'loaders' %>
+
+<form class="nifty_form" action="/articles" accept-charset="UTF-8" data-remote="true" method="post">
+  <input type="hidden" name="authenticity_token" value="NRkFyRWxdYNfUg7vYxLOp2SLf93lvnl+QwDWorR42Dp6yZXPhHEb6arhDOIWcqGit8jfnrPwL781/xlrzj63TA==" />
+  <input type="text" name="article[title]" id="article_title" />
+  <textarea name="article[text]" id="article_body" cols="60" rows="12"></textarea>
+  <input type="submit" name="commit" value="Create" data-disable-with="Create" />
+</form>

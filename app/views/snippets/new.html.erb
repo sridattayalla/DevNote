@@ -1,0 +1,30 @@
+<%= render partial: 'loaders' %>
+
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%= javascript_include_tag "snippet.js" %>
+
+<div class="text-center container-fluid ">
+  <div class="snippet_input_div row m-auto col-xs-12 col-md-7 col-lg-7 col-xl-7 d-flex">
+    <div class="m-auto w-100">
+      <form action="/snippets" class="d-flex flex-column container-fluid" accept-charset="UTF-8" data-remote="true" method="post">
+        <input type="hidden" name="authenticity_token" value="NRkFyRWxdYNfUg7vYxLOp2SLf93lvnl+QwDWorR42Dp6yZXPhHEb6arhDOIWcqGit8jfnrPwL781/xlrzj63TA=="/>
+        <textarea type="text" class="border-0 pt-2 pb-2 form-control noresize mt-2 mb-2" placeholder="Perfect title comes here" name="snippet[title]" id="snippet_title"></textarea>
+        <textarea name="snippet[desciption]" class="border-0 pt-2 pb-2 form-control noresize mt-2 mb-2" placeholder="Here goes the proper Description" id="snippet_description" cols="30" rows="10"></textarea>
+        <textarea name="snippet[code]" placeholder="//Write code here" class="border-0 pt-2 pb-2 form-control noresize mt-2 mb-2" id="snippet_code" cols="30" rows="10"></textarea>
+        <span class="text-left mb-2">Code Preview</span>
+        <div class="preview_div border-0">
+          <pre class="prettyprint text-left border-0 p-3 container-fluid w-100" id="prev-code">//Write code here</pre>
+        </div>
+        <div class="button_group d-flex justify-content-end">
+          <input type="submit" class="btn btn-primary  mr-3" name="commit" value="Create" data-disable-with="Create">
+          <input type="submit" class="btn btn-dark" name="commit" value="Draft" data-disable-with="Draft">
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+
+</div>
+

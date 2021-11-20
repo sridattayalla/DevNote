@@ -1,0 +1,37 @@
+<%= render partial: 'loaders' %>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%= javascript_include_tag "snippet.js" %>
+
+<div class="container-fluid row justify-content-center m-0 p-0 main position-relative">
+  <div class="nav-bar-container container-fluid bg-white shadow p-0 mb-3 rounded-lg w-100 border row position-sticky col-xs-12 col-md-8 col-lg-8 col-xl-8">
+
+    <div class="search_home_div col-xs-12 col-md-6  col-lg-6 col-xl-6  d-flex align-items-center align-content-center ">
+
+      <div class="img_div mr-2 cursor">
+        <a href="/snippets" class="nohover"><img src="/assets/logo.svg" class="logo " alt=""></a>
+      </div>
+
+
+    </div>
+    <div class="like_comment_div mb-2 mt-2 col-xs-12 col-md-6  col-lg-6 col-xl-6 d-flex align-items-center justify-content-between ">
+
+
+
+    </div>
+  </div>
+
+  <div class="content_div row col-md-8 col-lg-8 col-xl-8 col-xs-12">
+    <span class="snippet_title text-left p-0 col-12 mb-2" id="snippet_title">
+      <%= @snippet.title %>
+    </span>
+
+    <span class="mt-2 mb-2 col-12  text-left p-0">
+      <%= @snippet.desciption %>
+    </span>
+
+    <pre class="prettyprint col-12 text-left border-0 p-3">
+      <%= @snippet.code %>
+    </pre>
+  </div>
+</div>
